@@ -256,9 +256,16 @@ margin :8px 0 0;
     z-index: -1;
 }
 @media (max-width: 1199px){
-  .ima-cs{
-    float: right;
-  }
+  .services .services-content .image::after{
+    content: "";
+    background-color: var(--sec-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    position: absolute;
+    left: 0;
+    top: -50px;
+    z-index: -1;
+}
 }
 /* End services */
 /* start portfolio */
