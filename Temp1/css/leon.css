@@ -213,8 +213,12 @@ margin-top: 100px;
 grid-gap: 30px;
 }
 .services .services-content .srv{
-display: flex;
-margin-bottom: 40px;
+  display: flex;
+  margin-bottom: 40px;
+  border: 2px solid #10cab7;
+  padding: 8px;
+  border-radius: 30px;
+  background-color: #10cab714;
 }
 @media (max-width:768px)
 {
@@ -281,10 +285,7 @@ margin :8px 0 0;
     left: 0;
   }
 }
-@media (max-width: 767px){
-  .services .services-content .image{
-    right: 0;
-  }
+@media (max-width: 768px){
   .services .services-content .image::before{
     left: 0;
   }
