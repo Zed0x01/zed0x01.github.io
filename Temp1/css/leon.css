@@ -275,11 +275,18 @@ margin :8px 0 0;
     left: 50%;
   }
 }
+@media (max-width: 992px){
+  .services .services-content .image::after{
+    left: 0;
+  }
+  .services .services-content .image{
+    left: 0;
+  }
+}
 @media (max-width: 767px){
   .ima-cs{
     left: 0;
   }
-  
 }
 /* End services */
 /* start portfolio */
