@@ -260,6 +260,11 @@ margin :8px 0 0;
     float: right;
   }
 }
+@media (max-width: 767px){
+  .ima-cs{
+    float: right;
+  }
+}
 /* End services */
 /* start portfolio */
 .portfolio{
