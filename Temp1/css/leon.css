@@ -260,12 +260,13 @@ margin :8px 0 0;
 
 }
 @media (max-width: 992px){
-
-}
-@media (max-width: 768px){
   .services .services-content .image{
     right: 0;
   }
+
+}
+@media (max-width: 768px){
+  
 }
 /* End services */
 /* start portfolio */
