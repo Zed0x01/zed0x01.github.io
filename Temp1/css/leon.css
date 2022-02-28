@@ -254,19 +254,40 @@ margin :8px 0 0;
     right: 0;
     top: -50px;
     z-index: -1;
-    
 }
-@media (max-width: 1200px){
-
+.services .services-content .image::after{
+  content: "";
+  background-color: var(--sec-color);
+  width: 100px;
+  height: calc(100% + 100px);
+  position: absolute;
+  right: 0;
+  top: -50px;
+  z-index: -1;
 }
-@media (max-width: 992px){
+@media (max-width: 1200px) and (min-width:992px){
+  .services .services-content .image{
+    left: 50%;
+  }
+  .services .services-content .image::before{
+    left: 0;
+}
+}
+@media (max-width: 992px) and (min-width: 768px){
+  .services .services-content .image{
+    left: 50%;
+  }
+  .services .services-content .image::before{
+    left: 0;
+  }
+}
+@media (max-width: 767px){
   .services .services-content .image{
     right: 0;
   }
-
-}
-@media (max-width: 768px){
-  
+  .services .services-content .image::before{
+    left: 0;
+  }
 }
 /* End services */
 /* start portfolio */
