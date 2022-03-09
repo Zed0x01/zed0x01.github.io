@@ -683,7 +683,7 @@ flex: 1;
     color: var(--main-color);
 }
 .team .container .team-container .box  .info p{
-
+    margin-bottom: 20px;
 }
 /* Media Queries */
 @media (max-width:991px){
