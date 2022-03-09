@@ -685,6 +685,145 @@ flex: 1;
 .team .container .team-container .box  .info p{
     margin-bottom: 20px;
 }
+/* End Team Members */
+/* Start Services */
+.services{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    background-color: #ececec;
+}
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px , 1fr));
+    gap: 40px;
+}
+.services .box-container .box{
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    counter-increment: services;
+    transition: 0.3s;
+    position: relative;
+}
+.services .box-container .box::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 3px;
+    left: 50%;
+    background-color: #2196F3;
+    width: 0;
+    transition: 0.3s;
+}
+.services .box-container .box::after{
+    content: "";
+    top: 0;
+    position: absolute;
+    right: 50%;
+    height: 3px;
+    width: 0;
+    background-color: #2196F3;
+    transition: 0.3s;
+}
+.services .box-container .box:hover{
+    transform: translateY(-10px);
+}
+.services .box-container .box:hover::before,
+.services .box-container .box:hover::after{
+    width: 50%;
+}
+.services .box-container .box i{
+    margin: 30px auto 20px;
+    display: block;
+    text-align: center;
+    color: #d5d5d5;
+}
+.services .box-container .box h3{
+    text-align: center;
+    margin: 20px 0 40px;
+    font-size: 25px;
+    color: var(--main-color);
+}
+.services .box-container .box .info {
+    padding: 15px;
+    position: relative;
+    background-color: #f9f9f9;
+    text-align: right;
+}
+.services .box-container .box .info::before{
+    content: "";
+    position: absolute;
+    background-color: #d5d5d5;
+    top: 0;
+    left: 80px;
+    width: 50px;
+    height: calc(100% + 0.4px);
+    transform: skewX(-30deg);
+    z-index: 1;
+}
+.services .box-container .box .info::after{
+    content: "0" counter(services);
+    position: absolute;
+    background-color: #2196F3;
+    color: white;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+.services .box-container .box .info a{
+    color: var(--main-color);
+}
+/* End Services */
+/* Start Our Skills */
+.skills{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
+.skills .data{
+    display: flex;
+    align-items: center;
+}
+.skills .data .skills-degree{
+    flex: 1;
+}
+.skills .data .skills-degree .skill{
+
+}
+.skills .data .skills-degree .skill h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    position: relative;
+}
+.skills .data .skills-degree .skill h3 > span {
+    font-size: 16px;
+    border: 1px solid #eee;
+    padding: 2px;
+    border-radius: 6px;
+    color: #2196F3;
+    position: absolute;
+}
+.skills .data .skills-degree .skill .data-prog{
+    height: 30px;
+    background-color: #eee;
+    position: relative;
+}
+.skills .data .skills-degree .skill .data-prog span{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2196F3;
+}
+/* End Our Skills */
 /* Media Queries */
 @media (max-width:991px){
     .navbar .mega-menu .image img{
@@ -702,6 +841,9 @@ flex: 1;
     }
     .landing .content .text{
         text-align: center;
+    }
+    .skills .data  img{
+        display: none;
     }
 }
 @media (max-width:767px){
