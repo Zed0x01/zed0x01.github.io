@@ -619,6 +619,7 @@ border-color: var(--main-color);
 .skills .our-skills .prog-holder h2{
   font-size: 20px;
   font-weight: normal;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 .skills .our-skills .prog-holder .prog{
