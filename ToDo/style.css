@@ -1,0 +1,181 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding-top: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    position: relative;
+}
+.checked{
+    text-decoration: line-through;
+    color: black;
+}
+.checked .p2{
+    color: red !important;
+}
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+.container .form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.todotask{
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.container .todo{
+    margin: 25px auto;
+}
+.container .todo .task-input{
+    width: 300px;
+    height: 20px;
+    border-style: none;
+    background-color: aqua;
+    border-radius: 14px;
+    padding: 10px;
+    outline: none;
+    
+}
+.container .todo .task-btn{
+    padding:  6px;
+    border-style: none;
+    border: 1px solid aqua;
+    background-color: black;
+    color: aqua;
+    border-radius: 50%;
+    user-select: none;
+}
+.container .form-container >h1{
+    cursor: default;
+    user-select: none;
+}
+.container .form-container .todo-tasks{
+    border: 1px solid aqua;
+    border-radius: 15px;
+    background-color: black;
+    position: relative;
+}
+.container .form-container .todo-tasks > li{
+    padding: 5px;
+}
+.container .form-container .todo-tasks > li >p{
+    color: aqua;
+    display: inline;
+    font-size: 18px;
+    padding: 0 3px;
+}
+.container .form-container .todo-tasks .delete{
+    float: right;
+    transform: translateY(3px);
+    padding: 0 3px;
+    border-radius: 6px;
+    background-color: aqua;
+    border-style: none;
+    cursor: pointer;
+}
+/* .container .text{
+    position: absolute;
+    top: 5%;
+    left: 42%;
+}
+.form-container{
+    position: relative;
+    transform: translateY(25%);
+    left: 43%;
+} */
+/* .todotask{
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.todotask::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 36%);
+
+}
+
+.container .form-container{
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    width: 600px;
+}
+.container > h1{
+    left: 45%;
+    top:12%;
+    position: absolute;
+    padding: 4px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    transform: 0.3s;
+    border: 2px solid red;
+}
+.container .form-container .todo .task-input{
+    width: 250px;
+    height: 30px;
+    border-style: none;
+    border-radius: 6px;
+    background-color: #ffff0066;
+}
+
+.container .form-container .todo .task-btn{
+margin-left: 10px;
+padding: 7px ;
+border-radius: 50%;
+border-style: none;
+cursor: pointer;
+}
+.container .form-container .todo-tasks{
+    margin-top: 20px;
+    padding: 4px;
+    position: relative;
+    border: 3px solid red;
+    border-radius: 30px;
+}
+.container .form-container .todo-tasks > li {
+    padding: 5px 0;
+    max-width: 100%;
+}
+.container .form-container .todo-tasks > li > p {
+    font-size: 20px;
+    display: inline;
+}
+.container .form-container .todo-tasks > li .delete{
+    position: absolute;
+    margin-left: 8px;
+    left: right;
+} */
