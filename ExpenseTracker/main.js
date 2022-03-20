@@ -11,11 +11,11 @@ let moneyView = document.getElementsByClassName("moneyView");
 
 
 let alldata=[];
-let totalRemain = 0;
+let totalRemain = 0 ;
 getFromLocalStorage();
 
 /* document.getElementById("data-entry").addEventListener("click", function(event){
-    event.preventDefault()
+    event.preventDefault();
   });
  */
 
@@ -30,32 +30,37 @@ function submitdata(){
     let type = document.getElementById("Type").value;
     let amount = document.getElementById("amount1").value;
     if (title != "" && amount != ""){
-        if(type=="Income"){
-            totalRemain+=parseInt(amount);
-            const data = {
-                Title : title,
-                Type : type,
-                AmountMoney : parseInt(amount),
-            };
+        if(!isNaN(amount) ){
+            if(type=="Income"){
+                totalRemain+=parseInt(amount);
+                const data = {
+                    Title : title,
+                    Type : type,
+                    AmountMoney : parseInt(amount),
+                };
+        
+                alldata.push(data);
+                setToLocalStorage(alldata,totalRemain);
+            }
     
-            alldata.push(data);
-            setToLocalStorage(alldata,totalRemain);
+            else{
+                totalRemain-=parseInt(amount);
+                const data = {
+                    Title : title,
+                    Type : type,
+                    AmountMoney : parseInt(amount),
+                };
+        
+                alldata.push(data);
+                setToLocalStorage(alldata,totalRemain);
+            }
         }
-
         else{
-            totalRemain-=parseInt(amount);
-            const data = {
-                Title : title,
-                Type : type,
-                AmountMoney : parseInt(amount),
-            };
-    
-            alldata.push(data);
-            setToLocalStorage(alldata,totalRemain);
+            alert("Enter Valid Amount Please")
         }
     }
     else{
-        alert("Enter All Details");
+        alert("Enter All Fields Please");
     }
 }
 
@@ -88,7 +93,7 @@ function setToLocalStorage(ele,ele2){
 function getFromLocalStorage() {
     const reference = localStorage.getItem("Data");
     const reference1 = localStorage.getItem("TotalRemain");
-    // if reference exists
+
     if (reference1) {
         totalRemain = parseInt(reference1);
     }
