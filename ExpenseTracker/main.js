@@ -92,7 +92,10 @@ function getFromLocalStorage() {
     if (reference1) {
         totalRemain = parseInt(reference1);
     }
-    alldata= JSON.parse(reference);
+    if (reference){
+        alldata = JSON.parse(reference);
+    }
+    
     ShowData(alldata);
 }
 
