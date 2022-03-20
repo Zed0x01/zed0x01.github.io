@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="all.min.css">
+    <title>Money | Tracker</title>
+</head>
+<body>
+    <div class="tracker">
+        <div class="container">
+            <div class="container-data">
+                <div class="header">
+                    <div class="text">
+                        <h1 id="totalView"></h1>
+                        <p>Total Balance</p>
+                    </div>
+                    <button id="openBtn" onclick="openmenu()">+ Add</button>
+                    <div class="menu" id="menuoff">
+                        <div class="data">
+                            <form id="data-entry">
+                                <i class="fa-solid fa-xmark closeBtn" id="closeBtn" onclick="closemenu()"></i>
+                                <p>Title: </p>
+                                <input type="text" id="title">
+                                <p>Type: </p>
+                                <select id="Type">
+                                    <option value="Expense">Expense</option>
+                                    <option value="Income">Income</option>
+                                </select>
+                                <p>Amount: </p>
+                                <input type="text" id="amount1">
+                                <input type="submit" class="submitClick" onclick="submitdata()" value="Enter Data" ></button> <!-- onclick="submitdata()" -->
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <div class="Headerview">
+                        <p>Title</p>
+                        <p>Type</p>
+                        <p>Amount</p>
+                    </div>
+                </div>
+                <span></span>
+                <div class="content">
+                    <div class="data">
+                        <p>Title</p>
+                        <p>Type</p>
+                        <p>Amount</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

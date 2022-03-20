@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --mainColor:aqua;
+    --transColor:#00f8ff4d;
+}
+
+@media(min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+@media(min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+#menuon{
+    display: block;
+}
+#menuoff{
+    display: none;
+}
+.tracker{
+    background-image: url(background.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.container{
+    padding-top: 60px;
+    position: relative;
+    margin: 0 auto;
+}
+.container .container-data{
+    margin: 0 auto;
+    width: 750px;
+    max-width: 100%;
+    background-color: var(--transColor);
+    border-radius: 16px;
+    position: relative;
+}
+.container-data .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+    position: relative;
+}
+.container-data .header .text{
+    background-color: #4d4df2db;
+    padding: 10px;
+    border-radius: 20px;
+}
+.container-data .header > button{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px 50px;
+    border-radius: 10px;
+    background-color: var(--transColor);
+    cursor: pointer;
+    border: 1px solid white;
+    transition: 0.3s;
+}
+.container .container-data .header > button:hover{
+    font-size: 24px;
+}
+.container .container-data .header .menu{
+    position: absolute;
+    width: 70%;
+    max-width: 100%;
+    border: 6px solid black;
+    background-color: white;
+    border-radius: 14px;
+    z-index: 1;
+    left: 15%;
+    display: block;
+    transition: 0.3s;
+}
+.container-data .header .menu .data{
+    padding: 15px;
+}
+.container-data .header .menu .data .closeBtn{
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.container-data .header .menu .data >p{
+    display: inline;
+    padding-bottom: 10px;
+}
+.container-data .header .menu .data > input[type="text"]{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.container-data .header .menu .submitClick{
+    
+}
+.container .container-data >span{
+    position: absolute;
+    height: 2px;
+    width: calc(100% - 30px);
+    left: 15px;
+    color: red;
+    background-color: #4d4df2db;
+}
+.container-data .content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container-data .content .main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    position: relative;
+}
+.container-data .content .data {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    position: relative;
+}
+.container-data .content > span{
+    border-bottom: 1px solid black;
+    width: calc(100% - 30px);
+    position: absolute;
+    top: 50px;
+    left: 15px;
+}
+.container-data .content .data >p{
+    padding: 10px;
+    font-size: 19px;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 60px;
+    margin: 5px 5px;
+}
+.container-data .header .Headerview{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    margin: 7px;
+}
+.container-data .header .Headerview >p:nth-child(1){
+    font-size: 24px;
+    padding-left: 35%;
+}
+.container-data .header .Headerview >p:nth-child(2){
+    font-size: 24px;
+    padding-left: 118%;
+}
+.container-data .header .Headerview >p:nth-child(3){
+    font-size: 24px;
+    padding-left: 110%;
+}
