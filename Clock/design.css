@@ -50,7 +50,14 @@
         font-size: 110px;
     }
 }
-
+@media (max-width:634px){
+    .container .date p{
+        font-size: 40px;
+    }
+    .container .clock p{
+        font-size: 50px;
+    }
+}
     
 .landing{
     height: 100vh;
