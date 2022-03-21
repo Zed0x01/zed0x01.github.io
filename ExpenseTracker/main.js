@@ -75,7 +75,7 @@ function ShowData(ele){
         div.setAttribute('class','data');
 
         div.innerHTML = `
-          <p>$${item.Title}</p>
+          <p>${item.Title}</p>
           <p>${item.Type}</p>
           <p>$${item.AmountMoney}</p>
         `;
