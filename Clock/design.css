@@ -7,22 +7,51 @@
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
 }
 @media (min-width:768px){
     .container{
     width:750px;
+    }
+    .container .date p{
+        font-size: 30px;
+    }
+    .container .clock p{
+        font-size: 70px;
+    }
+}
+@media (max-width:767px) {
+    .container .date p{
+        font-size: 20px;
+    }
+    .container .clock p{
+        font-size: 55px;
     }
 }
 @media (min-width:992px){
     .container{
     width:970px;
     }
+    .container .date p{
+        font-size: 40px;
+    }
+    .container .clock p{
+        font-size: 80px;
+    }
 }
 @media (min-width:1200px){
     .container{
     width:1170px;
     }
+    .container .date p{
+        font-size: 50px;
+    }
+    .container .clock p{
+        font-size: 110px;
+    }
 }
+
+    
 .landing{
     height: 100vh;
     position: relative;
@@ -42,7 +71,7 @@
     display: inline;
     padding: 0 3px;
     margin: 0 5px;
-    font-size: 110px;
+    
     background-color: black;
     color: wheat;
     border-radius: 16px;
@@ -51,7 +80,7 @@
 .container .date p{
     font-family: 'Lobster', cursive;
     font-weight: bold;
-    font-size: 50px;
+    
     display: inline;
     position: absolute;
     top: 20%;

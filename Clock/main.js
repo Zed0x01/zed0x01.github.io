@@ -34,4 +34,4 @@ function showtime(){
     `;
 }
 
-setInterval(showtime,1000);
+/* setInterval(showtime,1000); */
