@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+
+.calculator{
+    background-color: #2eb8b8;
+}
+
+.calculator .title{
+    position: relative;
+}
+.calculator .title >h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 50px;
+}
+
+.container{
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+}
+.frame{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 16px;
+}
+.container .screen{
+    height: 80px;
+    width: 225px;
+    background-color: white;
+    border-radius: 25px;
+}
+.numbers{
+    width: 225px;
+    height: 275px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(50px , 1fr));
+}
+.numbers > button{
+    width: 50px;
+    justify-content: flex-end;
+    border-radius: 50%;
+    margin: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.numbers > button:hover{
+    color: red;
+    background-color: aquamarine;
+}
+.equal{
+    grid-column: 4;
+    grid-row: 2 / 6;
+}
+.container .screen{
+    position: relative;
+}
+.container .screen #historyValue{
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+/* .container .screen #historyNubmers p{
+    display: inline;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 6px;
+    color: #777;
+} */
+
+.container .screen  #inputValue {
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    bottom: 6px;
+    left: 10px;
+}
