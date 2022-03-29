@@ -1,19 +1,15 @@
 let inputText = document.querySelector('.inputText');
-let DOCtext = document.querySelector('.text');
-function getRepos(){
-    let myRequest = new XMLHttpRequest();
-    myRequest.onreadystatechange = function (){
-        if(this.status === 200 && this.readyState === 4){
-            console.log(this.responseText);
-            DOCtext.innerHTML=`
-            ${this.responseText}
-            `;
-        }
-    }
-    myRequest.open(
-        "GET",
-        inputText.value,
-        true
-    );
-    myRequest.send();
+let button = document.querySelector('.btn1');
+
+button.onclick = async () =>{
+    const respone = await fetch(inputText.value);
+    const jsonData = await respone.json();
+    jsonData.forEach(users => {
+        console.log(`
+        Name : ${users.name}
+        Username : ${users.username}
+        Phone : ${users.phone}
+        Website : ${users.website}
+        `);
+    });
 }
