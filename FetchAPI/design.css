@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    height: 100vh;
+    background-color: rgba(52, 196, 176, 0.404);
+}
+
+.form{
+    text-align: center;
+    padding: 25px 0;
+}
+.form .inputText{
+    width: 250px;
+    height: 20px;
+    border-radius: 15px;
+    padding: 0 10px;
+    outline: none;
+}
+.form .btn1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 211, 183, 0.973);
+    font-weight: bold;
+    cursor: pointer;
+}
+.contentView{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentView > h2{
+    margin: 0 10px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
+}
