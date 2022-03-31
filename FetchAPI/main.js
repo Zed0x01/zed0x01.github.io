@@ -3,7 +3,6 @@ let button = document.querySelector(".btn1");
 let contentView = document.querySelector(".contentView");
 
 button.addEventListener("click", async (event) => {
-    event.preventDefault();
     const respone = await fetch(inputText.value, {
         method: "GET",
         accept: "application/text",
