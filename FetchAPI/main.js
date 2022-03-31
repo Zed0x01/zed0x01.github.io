@@ -1,34 +1,24 @@
-let inputText = document.querySelector(".inputText");
-let button = document.querySelector(".btn1");
-let contentView = document.querySelector(".contentView");
+const inputText = document.querySelector(".inputText");
+const formHolder = document.querySelector(".formHolder");
+const contentView = document.querySelector(".contentView");
 
-button.addEventListener("click", async (event) => {
+formHolder.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const respone = await fetch(inputText.value, {
-        method: "GET",
-        accept: "application/text",
-    });
+    const respone = await fetch(inputText.value);
     const jsonData = await respone.text();
     getElementsReq(jsonData);
 });
 
 function getElementsReq(data) {
-    let parseData = new DOMParser();
-    let parsedData = parseData.parseFromString(data, "text/html");
-    let pageTitle = parsedData.title;
-    let meta = parsedData.getElementsByTagName("meta");
+    const parseData = new DOMParser();
+    const parsedData = parseData.parseFromString(data, "text/html");
+    const description = parsedData.querySelector("meta[name=description]");
     
-    for (let i = 0; i < meta.length; i++) {
-        if (meta[i].getAttribute("name") && meta[i].getAttribute("content")) {
-            let firsth2 = document.createElement("h2");
-            firsth2.setAttribute("id", "titlePage");
-            firsth2.innerText = `Name : ${pageTitle}`;
-            contentView.append(firsth2);
+    const descElement = document.createElement('h2');
+    descElement.innerText = `Name : ${parsedData.title}`
+    contentView.append(descElement);
 
-            let secondh2 = document.createElement("h2");
-            secondh2.setAttribute("id", "descriptionPage");
-            secondh2.innerText = `${meta[i].getAttribute("name")} : ${meta[i].getAttribute("content")}`;
-            contentView.append(secondh2);
-        }
-    }
+    const titleElement = document.createElement('h2');
+    titleElement.innerText= `Description : ${description.getAttribute('content')}`;
+    contentView.append(titleElement);
 }
