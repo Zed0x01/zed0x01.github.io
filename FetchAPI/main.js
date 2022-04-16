@@ -10,10 +10,11 @@ formHolder.addEventListener("submit", async (event) => {
 });
 
 function getElementsReq(data) {
+
     const parseData = new DOMParser();
     const parsedData = parseData.parseFromString(data, "text/html");
     const description = parsedData.querySelector("meta[name=description]");
-    
+
     const descElement = document.createElement('h2');
     descElement.innerText = `Name : ${parsedData.title}`
     contentView.append(descElement);
@@ -21,4 +22,5 @@ function getElementsReq(data) {
     const titleElement = document.createElement('h2');
     titleElement.innerText= `Description : ${description.getAttribute('content')}`;
     contentView.append(titleElement);
+
 }
