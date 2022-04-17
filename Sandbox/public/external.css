@@ -1,7 +1,7 @@
 .dots {
     position: absolute;
     top: 120px;
-    left: -50px;
+    left: -0px;
     opacity: 0.5;
     background-image: radial-gradient(#212121 20%, rgb(229 231 235) 20%);
     background-position: 0 0;
@@ -32,7 +32,6 @@
 .lines {
     position: absolute;
     bottom: 120px;
-    right: -20px;
     opacity: 0.2;
     background: repeating-linear-gradient(75deg,
             #212121 10px,

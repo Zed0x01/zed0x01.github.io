@@ -15,7 +15,38 @@ module.exports = {
       colors :{
         'lightdrak':'#343f52',
         'lightgray':'#60697b',
+      },
+      animation : {
+        'up' : 'up 0.6s linear',
+        'down' : 'up 0.6s linear',
+        'right' : 'right 0.6s linear',
+        'left' : 'left 0.6s linear',
+        'light' : 'light 1.5s linear',
+      },
+
+      keyframes : {
+        up : {
+          'from' : {transform : 'translateY(100px)' , opacity:'0'},
+          'to':{transform : 'translateY(0)' , opacity : '1'}
+        },
+        down : {
+          'from' : {transform : 'translateY(-100px)' , opacity:'0'},
+          'to':{transform : 'translateY(0)' , opacity : '1'}
+        },
+        left : {
+          'from' : {transform : 'translateX(-100px)' , opacity:'0'},
+          'to':{transform : 'translateY(0)' , opacity : '1'}
+        },
+        right : {
+          'from' : {transform : 'translateX(100px)' , opacity:'0'},
+          'to':{transform : 'translateY(0)' , opacity : '1'}
+        },
+        light : {
+          'from' : { opacity: '0' },
+          'to' : { opacity : '1'}
+        }
       }
+      
     },
   },
   plugins: [],
