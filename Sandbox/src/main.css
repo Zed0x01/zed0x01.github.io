@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
+.container{
     @apply px-4 mx-auto;
 }
 .blue-btn{
-    @apply bg-blue-700 text-lg py-1 px-4 rounded text-white;
+    @apply bg-[#3f78e0]  py-[12px] px-[20px] rounded-[10px] font-bold text-white;
 }
 .green-btn{
-    @apply bg-green-700 text-lg py-1 px-4 rounded text-white;
+    @apply bg-[#45c4a0]  py-[12px] px-[20px] rounded-[10px] font-bold text-white;
 }
