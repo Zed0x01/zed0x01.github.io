@@ -502,6 +502,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .absolute {
   position: absolute;
 }
@@ -542,12 +554,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 20%;
 }
 
-.left-\[3px\] {
-  left: 3px;
+.left-1 {
+  left: 0.25rem;
 }
 
-.top-\[5px\] {
-  top: 5px;
+.top-1 {
+  top: 0.25rem;
 }
 
 .top-\[-40px\] {
@@ -582,16 +594,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 2.5rem;
 }
 
-.left-\[21px\] {
-  left: 21px;
+.top-\[14px\] {
+  top: 14px;
 }
 
-.left-\[6px\] {
-  left: 6px;
-}
-
-.left-\[8px\] {
-  left: 8px;
+.right-\[-2px\] {
+  right: -2px;
 }
 
 .z-10 {
@@ -622,14 +630,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 25px;
 }
 
+.my-\[15px\] {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .mx-\[5px\] {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .mr-2 {
@@ -720,20 +743,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 120px;
 }
 
-.h-\[14px\] {
-  height: 14px;
+.h-\[10px\] {
+  height: 10px;
 }
 
-.h-\[8px\] {
-  height: 8px;
+.h-8 {
+  height: 2rem;
 }
 
-.h-\[30px\] {
-  height: 30px;
-}
-
-.h-\[20px\] {
-  height: 20px;
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-\[110\%\] {
@@ -768,6 +787,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 120px;
 }
 
+.w-\[270px\] {
+  width: 270px;
+}
+
 .w-\[50px\] {
   width: 50px;
 }
@@ -776,20 +799,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.w-\[14px\] {
-  width: 14px;
+.w-\[450px\] {
+  width: 450px;
 }
 
-.w-\[8px\] {
-  width: 8px;
+.w-\[300\%\] {
+  width: 300%;
 }
 
-.w-\[45px\] {
-  width: 45px;
+.w-\[10px\] {
+  width: 10px;
 }
 
-.w-\[20px\] {
-  width: 20px;
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .max-w-\[450px\] {
@@ -835,8 +862,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-up {
-  -webkit-animation: up 0.6s linear;
-          animation: up 0.6s linear;
+  -webkit-animation: up 2s ease-in-out;
+          animation: up 2s ease-in-out;
 }
 
 @-webkit-keyframes left {
@@ -864,8 +891,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-left {
-  -webkit-animation: left 0.6s linear;
-          animation: left 0.6s linear;
+  -webkit-animation: left 2s ease-in-out;
+          animation: left 2s ease-in-out;
 }
 
 @-webkit-keyframes right {
@@ -893,8 +920,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-right {
-  -webkit-animation: right 0.6s linear;
-          animation: right 0.6s linear;
+  -webkit-animation: right 2s ease-in-out;
+          animation: right 2s ease-in-out;
 }
 
 @-webkit-keyframes light {
@@ -918,193 +945,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-light {
-  -webkit-animation: light 1.5s linear;
-          animation: light 1.5s linear;
-}
-
-.animate-\[\] {
-  -webkit-animation: ;
-          animation: ;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light\] {
-  -webkit-animation: light;
-          animation: light;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_\] {
-  -webkit-animation: light;
-          animation: light;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_1s_linear_0\.5s\] {
-  -webkit-animation: light 1s linear 0.5s;
-          animation: light 1s linear 0.5s;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_1s_ease_0\.5s\] {
-  -webkit-animation: light 1s ease 0.5s;
-          animation: light 1s ease 0.5s;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_1s_ease-in_0\.5s\] {
-  -webkit-animation: light 1s ease-in 0.5s;
-          animation: light 1s ease-in 0.5s;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_2s_ease-in_0\.5s\] {
-  -webkit-animation: light 2s ease-in 0.5s;
-          animation: light 2s ease-in 0.5s;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_2s_linear_0\.5s\] {
-  -webkit-animation: light 2s linear 0.5s;
-          animation: light 2s linear 0.5s;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_2s_\] {
-  -webkit-animation: light 2s;
-          animation: light 2s;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_2s_linear_\] {
-  -webkit-animation: light 2s linear;
-          animation: light 2s linear;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_2s_linear_1s\] {
-  -webkit-animation: light 2s linear 1s;
-          animation: light 2s linear 1s;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_2s_linear\] {
-  -webkit-animation: light 2s linear;
-          animation: light 2s linear;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_2s_linear_1\.5s\] {
-  -webkit-animation: light 2s linear 1.5s;
-          animation: light 2s linear 1.5s;
+  -webkit-animation: light 2s ease-in-out;
+          animation: light 2s ease-in-out;
 }
 
 @keyframes up {
@@ -1120,279 +962,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-down {
-  -webkit-animation: up 0.6s linear;
-          animation: up 0.6s linear;
-}
-
-@keyframes up {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-\[up_\] {
-  -webkit-animation: up;
-          animation: up;
-}
-
-@keyframes up {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-\[up_0\.5s_linear\] {
-  -webkit-animation: up 0.5s linear;
-          animation: up 0.5s linear;
-}
-
-@keyframes up {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-\[up_1s_lineara\] {
-  -webkit-animation: up 1s lineara;
-          animation: up 1s lineara;
-}
-
-@keyframes up {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-\[up_1s_linear\] {
-  -webkit-animation: up 1s linear;
-          animation: up 1s linear;
-}
-
-@keyframes up {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-\[up_1\.5s_linear\] {
-  -webkit-animation: up 1.5s linear;
-          animation: up 1.5s linear;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_0\.5_linear\] {
-  -webkit-animation: light 0.5 linear;
-          animation: light 0.5 linear;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_0\.5s_linear\] {
-  -webkit-animation: light 0.5s linear;
-          animation: light 0.5s linear;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_1s_linear\] {
-  -webkit-animation: light 1s linear;
-          animation: light 1s linear;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_1\.5s_linear_1s\] {
-  -webkit-animation: light 1.5s linear 1s;
-          animation: light 1.5s linear 1s;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_1\.5s_linear\] {
-  -webkit-animation: light 1.5s linear;
-          animation: light 1.5s linear;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_3\.5s_linear\] {
-  -webkit-animation: light 3.5s linear;
-          animation: light 3.5s linear;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_4s_linear\] {
-  -webkit-animation: light 4s linear;
-          animation: light 4s linear;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light__\] {
-  -webkit-animation: light;
-          animation: light;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light__linear\] {
-  -webkit-animation: light  linear;
-          animation: light  linear;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_s_linear\] {
-  -webkit-animation: light s linear;
-          animation: light s linear;
-}
-
-@keyframes light {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-\[light_2\.5s_linear\] {
-  -webkit-animation: light 2.5s linear;
-          animation: light 2.5s linear;
-}
-
-@keyframes up {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-\[up_0\.4s_linear\] {
-  -webkit-animation: up 0.4s linear;
-          animation: up 0.4s linear;
+  -webkit-animation: up 2s ease-in-out;
+          animation: up 2s ease-in-out;
 }
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.grid-cols-350 {
+  grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
 }
 
 .grid-cols-300 {
@@ -1431,12 +1010,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .gap-10 {
   gap: 2.5rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded {
@@ -1451,16 +1030,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 1.5rem;
 }
 
-.rounded-\[14px\] {
-  border-radius: 14px;
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-\[12px\] {
   border-radius: 12px;
-}
-
-.rounded-full {
-  border-radius: 9999px;
 }
 
 .border-r-0 {
@@ -1497,11 +1072,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(254 243 228 / var(--tw-bg-opacity));
 }
 
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1522,9 +1092,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(170 176 188 / var(--tw-bg-opacity));
 }
 
-.bg-blue-600 {
+.bg-gray-300 {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
 .bg-red-200 {
@@ -1630,6 +1200,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }
 
+.py-\[15px\] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .py-\[12px\] {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -1691,14 +1266,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 40px;
 }
 
-.pr-2 {
-  padding-right: 0.5rem;
-}
-
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
 .pt-\[10px\] {
   padding-top: 10px;
 }
@@ -1713,6 +1280,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pb-\[20px\] {
   padding-bottom: 20px;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .pb-\[5px\] {
@@ -1805,6 +1376,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 400;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .text-blue-300 {
   --tw-text-opacity: 1;
   color: rgb(147 197 253 / var(--tw-text-opacity));
@@ -1860,6 +1435,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(170 176 188 / var(--tw-text-opacity));
 }
 
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
 .text-green-500 {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
@@ -1880,34 +1460,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(202 202 202 / var(--tw-text-opacity));
 }
 
-.opacity-0 {
-  opacity: 0;
-}
-
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.delay-500 {
-  transition-delay: 500ms;
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
-.delay-700 {
-  transition-delay: 700ms;
-}
-
-.delay-\[\] {
-  transition-delay: ;
+.transition {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .delay-\[1\.4s\] {
   transition-delay: 1.4s;
 }
 
+.duration-700 {
+  transition-duration: 700ms;
+}
+
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .container {
@@ -1943,11 +1529,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.focus\:left-\[-21px\]:focus {
-  left: -21px;
+.active {
+  height: 14px;
+  width: 14px;
+}
+
+.active\:h-\[20px\]:active {
+  height: 20px;
+}
+
+.active\:w-\[20px\]:active {
+  width: 20px;
 }
 
 @media (min-width: 768px) {
+  .md\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .md\:w-\[700px\] {
     width: 700px;
   }
@@ -2001,6 +1606,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-right: 40px;
   }
 
+  .lg\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
   .lg\:mr-\[15px\] {
     margin-right: 15px;
   }
@@ -2011,6 +1621,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:mt-0 {
     margin-top: 0px;
+  }
+
+  .lg\:mb-\[100px\] {
+    margin-bottom: 100px;
   }
 
   .lg\:block {
@@ -2142,12 +1756,15 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 60px;
   }
 
-  .lg\:pb-\[100px\] {
-    padding-bottom: 100px;
-  }
-
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
 }

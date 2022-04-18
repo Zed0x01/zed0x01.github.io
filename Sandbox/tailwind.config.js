@@ -17,11 +17,11 @@ module.exports = {
         'lightgray':'#60697b',
       },
       animation : {
-        'up' : 'up 0.6s linear',
-        'down' : 'up 0.6s linear',
-        'right' : 'right 0.6s linear',
-        'left' : 'left 0.6s linear',
-        'light' : 'light 1.5s linear',
+        'up' : 'up 2s ease-in-out',
+        'down' : 'up 2s ease-in-out',
+        'right' : 'right 2s ease-in-out',
+        'left' : 'left 2s ease-in-out',
+        'light' : 'light 2s ease-in-out',
       },
 
       keyframes : {

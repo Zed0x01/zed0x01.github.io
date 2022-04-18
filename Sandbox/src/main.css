@@ -11,3 +11,7 @@
 .green-btn{
     @apply bg-[#45c4a0]  py-[12px] px-[20px] rounded-[10px] font-bold text-white;
 }
+
+.active{
+    @apply w-[14px] h-[14px];
+}
