@@ -787,10 +787,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 50px;
 }
 
-.w-\[34\%\] {
-  width: 34%;
-}
-
 .w-14 {
   width: 3.5rem;
 }
@@ -807,10 +803,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 240px;
 }
 
-.w-fit {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.w-\[\] {
+  width: ;
+}
+
+.w-\[430px\] {
+  width: 430px;
+}
+
+.w-\[33\%\] {
+  width: 33%;
+}
+
+.w-\[34\%\] {
+  width: 34%;
 }
 
 .max-w-\[450px\] {
@@ -1631,6 +1637,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:grid-cols-300 {
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  }
+
+  .lg\:grid-cols-350 {
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
   }
 
   .lg\:flex-row {
