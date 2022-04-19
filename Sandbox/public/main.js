@@ -61,20 +61,3 @@ smallbullet.onclick = ()=>{
         corpText.innerText = '/Month';
     }
 }
-
-// Slider
-
-function move(e){
-    if(e==1){
-        console.log('1');
-        textSelector.style.marginLeft='0';
-    }
-    else if(e==2){
-        console.log('2');
-        textSelector.style.marginLeft ='-67%';
-    }
-    else{
-        console.log('3');
-        textSelector.style.marginLeft ='-134%';
-    }
-}

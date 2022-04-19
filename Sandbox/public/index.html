@@ -219,7 +219,6 @@
         <div class="container ">
             <div class="main-head text-center py-6  rounded-3xl">
                 <h1 class="text-3xl text-gray-500 ">Happy Customers</h1>
-
             </div>
             <div class="customers grid grid-cols-350 lg:grid-cols-300  rounded my-[25px] ">
                 <div class="box rounded bg-white shadow-xl p-5 w-[270px] mx-auto my-[15px] translate-x-[-30px] opacity-0" animates="animate-left" data-parralex="true">
@@ -391,8 +390,8 @@
     <!-- End Video -->
     <!-- Start Partners -->
     <div class="partners">
-        <div class="container  flex flex-col">
-            <div class="up py-[60px] flex justify-between  flex-col lg:flex-row">
+        <div class="container flex flex-col">
+            <div class="up py-[60px] flex flex-col lg:flex-row">
                 <div class="left">
                     <div class="images lg:flex lg:flex-row">
                         <div class="1 lg:pr-[25px]">
@@ -407,8 +406,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="right cursor-grab ">
-                    <div class="custl flex flex-row text-center w-[450px] lg:w-[500px] mx-auto">
+                <div class="right  cursor-grab ">
+                    <div class="custl flex  flex-row text-center lg:w-[500px] ">
                         <div class="1 flex flex-col text-center mx-6">
                             <i class="fa-solid fa-quote-left fa-3x mt-[35px] text-[#e0e9fa]"></i>
                             <q class="text-gray-500 py-[10px] block text-xl text-center" id="clientText">Lorem ipsum dolor sit amet,
@@ -668,7 +667,7 @@
                     <p class="text-[#cacaca] pt-[20px]">Subscribe to our newsletter to get our news get delivered to
                         you.</p>
                     <form class="relative w-[240px] my-8">
-                        <input type="text" class=" inline py-[12px] pr-[40px] w-[240px] pl-[10px] bg-gray-700 rounded-[12px] border-r-0"
+                        <input type="text" class="text-white inline py-[12px] pr-[40px] w-[240px] pl-[10px] bg-gray-700 rounded-[12px] border-r-0"
                             placeholder="Email Address">
                         <button class="blue-btn absolute right-0 top-0">Join</button>
                     </form>
@@ -683,9 +682,11 @@
     <script type="text/javascript">
     $('.custl').slick({
         dots:true,
-        infinite: true,
+        infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        centerMode:true,
+        variableWidth: true,
     });
     </script>
 </body>
