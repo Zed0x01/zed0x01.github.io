@@ -62,6 +62,8 @@ smallbullet.onclick = ()=>{
     }
 }
 
+// Slider
+
 function move(e){
     if(e==1){
         console.log('1');
