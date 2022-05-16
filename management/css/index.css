@@ -1,0 +1,271 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.home{
+    width: 100%;
+    height: 50vh;
+}
+.container{
+    padding: 0 25px;
+    margin: 0 auto;
+}
+.navbar{
+    width: 100%;
+    background-color: black;
+    z-index: 2;
+    position: fixed;
+}
+.navbar .logo img{
+    width: 350px;
+}
+.nav_elements{
+    display: flex;
+    justify-content: space-between;
+}
+.nav__links{
+    display: flex;
+    align-items: center;
+}
+.nav__links li a{
+    transition: 0.6s;
+}
+.nav__links li a:hover{
+    color: red;
+}
+.slick-dots li button:before{
+    opacity: 1 !important;
+    color: red !important;
+}
+.nav__links li a{
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 0 20px;
+    transition: all 0.6s;
+}
+.landing{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.959);
+}
+.landing .container{
+    padding: 150px 0;
+}
+.slider__photo{
+    display: flex;
+    width: 70%;
+    
+    margin: 0 auto;
+}
+.slider__photo img{
+    width: 100%;
+}
+
+.slider_P{
+    padding:69px 0px ;
+}
+
+
+/* Start New Form */
+.form{
+    width: 100%;
+}
+.form .container{
+    position: relative;
+}
+.head{
+    text-transform: uppercase;
+    position: absolute;
+    margin: 30px 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.data{
+    padding: 100px 0;
+}
+.data > div{
+    padding-top: 25px;
+}
+.data input{
+    width: 100%;
+    border:none;
+    border-bottom: 2px solid #777;
+    outline: none;
+    padding-top: 20px;
+    font-size: 20px;
+    background-color: transparent;
+}
+.data label{
+    color: #777;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.phone{
+    width: 70%;
+}
+#form__submit{
+    width: 100%;
+    padding: 15px 0;
+    margin: 35px 0;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    background-color: rgba(119, 119, 119, 0.836);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#form__submit:hover{
+    background-color: #777;
+}
+.social__icons{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.social__icons div{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    max-height: 38px;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+.social__icons div:hover{
+    transform: scale(1.09);
+}
+.social__icons div i{
+    padding: 20px;
+    color: white;
+}
+.social__icons div p{
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+}
+.content{
+    text-align: center;
+    width: 100%;
+    height: 70vh;
+    background-color: black;
+    margin: 0 auto;
+}
+.content .container{
+    width: 70%;
+}
+.content p,h2{
+    font-size: 30px;
+    color: white;
+    max-width: 70%;
+}
+.whatsapp i{
+    background-color: #0dc30d;
+}
+.whatsapp p{
+    background-color: #059f05;
+}
+.facebook i{
+    background-color: #1010f3;
+}
+.facebook p{
+    background-color: rgb(0, 0, 170);
+}
+.linkedin i{
+    background-color: #0072ff;
+}
+.linkedin p{
+    background-color: #0052b7;
+}
+.google i{  
+    background-color: #ff3b00;
+}
+.google p{
+    background-color: #e13704;
+}
+.pinterest i{
+    background-color: rgb(255, 60, 60);
+}
+.pinterest p{
+    background-color: red;
+}
+.twitter i{
+    background-color: rgb(44, 152, 253);
+}
+.twitter p{
+    background-color: #077ae5;
+}
+/* End New Form */
+
+/* Start Footer */
+.footer__content{
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.footer__content p{
+    text-align: center;
+    padding: 30px 0;
+}
+/* End Footer */
+
+/* Start Fitness */
+.header__fitness{
+    width: 100%;
+    background-color: black;
+}
+.header__fitness .contentx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contentx .logo img{
+    width: 180px;
+}
+.header__fitness .nav_link a{
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.images__container{
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.datax{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 80px;
+}
+.data__image{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.data__image img{
+    border-radius: 25px;
+    max-height: 330px;
+}
+.data__image p{
+    max-width: 450px;
+    margin: 10px;
+    font-size: 18px;
+    transition: all 0.6s;
+}
+.data__image p:hover{
+    color: rgba(255, 0, 0, 0.699);
+}
+/* End Fitness */
